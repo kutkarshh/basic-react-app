@@ -2,9 +2,15 @@ import React from "react";
 
 import './style.css';
 
-const TodoItem: React.FC = () => {
+interface TodoItemProps {
+    title: string,
+    id: string
+}
+
+const TodoItem: React.FC<TodoItemProps> = (props) => {
+    console.log('TodoItem', props);
     return (
-        <li>I am a Todo Item</li>
+        <li key={props.id}>{props.title}</li>
     );
 }
 
