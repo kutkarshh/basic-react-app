@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Counter from "./components/Counter";
 import Todo from "./components/Todo";
 
@@ -21,15 +21,19 @@ const titles = [
     },
 ];
 
-const products = ["Mobile", "Laptop", "Television"];
+const products = ["Mobile"];
+
 
 const App: React.FC = () => {
+
+    const [buyButton, setBuyButton] = useState(false);
 
     return (<div >
         <h1 className="title">Basic React App</h1>
         <div className="container">
             <Todo items={titles} />
-            <Counter products={products} />
+            <button onClick={(e) => setBuyButton(!buyButton)}>Buy</button>
+            {buyButton ? <Counter products={products} /> : ""}
         </div>
     </div>)
 };

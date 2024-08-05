@@ -18,7 +18,7 @@ const Todo: React.FC<TodoProps> = (props) => {
         <div className="todo-container">
             <ol className="todo-list">
                 <h2>Todo List</h2>
-                {props.items.map((title) => <TodoItem title={title.title} id={title.id} />)}
+                {props.items.map((title) => <TodoItem title={title.title} id={title.id} key={title.id} />)}
                 {/* <TodoItem title="Todo Item 1" />
                 <TodoItem title="Todo Item 2" />
                 <TodoItem title="Todo Item 3" />

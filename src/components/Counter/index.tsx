@@ -9,11 +9,12 @@ interface ProductProps {
 }
 
 const Counter: React.FC<ProductProps> = ({ products }) => {
+
     // Using Counter Concept in React JS
     return (
         <div className="counter-container">
             <h2>Buy Products</h2>
-            {products.map((product) => <ProductItem product={product} />)}
+            {products.map((product, index) => <ProductItem product={product} key={index} />)}
         </div>
     );
 }

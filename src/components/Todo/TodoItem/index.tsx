@@ -9,7 +9,7 @@ interface TodoItemProps {
 
 // Destructured props --> props.title and props.id to {title} and {id}
 const TodoItem: React.FC<TodoItemProps> = ({ id, title }) => {
-    console.log('TodoItem', id, title);
+    // console.log('TodoItem', id, title);
     return (
         <li key={id}>{title}</li>
     );
