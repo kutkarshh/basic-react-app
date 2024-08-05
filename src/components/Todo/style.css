@@ -1,0 +1,9 @@
+.todo-container {
+  background-color: cadetblue;
+  width: 300px;
+  border: 2px dashed tomato;
+  margin-left: 20px;
+  display: inline-flex;
+  flex-direction: row;
+  align-self: center;
+}
