@@ -17,6 +17,7 @@ const Todo: React.FC<TodoProps> = (props) => {
     return (
         <div className="todo-container">
             <ol className="todo-list">
+                <h2>Todo List</h2>
                 {props.items.map((title) => <TodoItem title={title.title} id={title.id} />)}
                 {/* <TodoItem title="Todo Item 1" />
                 <TodoItem title="Todo Item 2" />

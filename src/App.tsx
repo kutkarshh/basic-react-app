@@ -1,4 +1,5 @@
 import React from "react";
+import Counter from "./components/Counter";
 import Todo from "./components/Todo";
 
 const titles = [
@@ -19,13 +20,17 @@ const titles = [
         title: "Breakfast",
     },
 ];
+
+const products = ["Mobile", "Laptop", "Television"];
+
 const App: React.FC = () => {
 
-    return (<div>
-        <h1>Basic React App</h1>
-        <Todo items={titles} />
-        <Todo items={titles} />
-        <Todo items={titles} />
+    return (<div >
+        <h1 className="title">Basic React App</h1>
+        <div className="container">
+            <Todo items={titles} />
+            <Counter products={products} />
+        </div>
     </div>)
 };
 
